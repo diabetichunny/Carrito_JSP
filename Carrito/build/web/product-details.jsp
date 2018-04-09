@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+                            <h3><a href="./">Carrito WEB</a></h3>
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -69,34 +69,37 @@
     
     <section>
         <div class="container">
-            <div class="row">
-                <div class="col-sm-9 padding-right">
-                    <div class="product-details"><!--product-details-->
-                        <div class="col-sm-5">
-                            <div class="view-product">
-                                <img src="<%= producto.getImg() %>" alt="" />
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-sm-9 padding-right">
+                        <div class="product-details"><!--product-details-->
+                            <div class="col-sm-5">
+                                <div class="view-product">
+                                    <img src="<%= producto.getImg() %>" alt="" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-7">
-                            <div class="product-information"><!--/product-information-->
-                                <h2><%= producto.getNombre() %></h2>
-                                <form action="agregar-producto" method="POST">
-                                    <span>
-                                        <span>RD$ <%= producto.getPrecio() %></span>
-                                        <label>Cantidad:</label>
-                                        <input type="hidden" value="<%= producto.getId() %>" name="idproducto"/>
-                                        <input type="text" value="1" id="txt-cantidad" name="cantidad" style="margin-bottom: 10px;"/>
-                                        <button type="submit" class="btn btn-fefault cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            Agregar al carrito
-                                        </button>
-                                    </span>
-                                </form>
-                                <p><b>Disponibilidad</b> Dispoible</p>
-                                <p><b>Condici&oacute;n:</b> Nuevo</p>
-                            </div><!--/product-information-->
-                        </div>
-                    </div><!--/product-details-->
+                            <div class="col-sm-7">
+                                <div class="product-information"><!--/product-information-->
+                                    <h2><%= producto.getNombre() %></h2>
+                                    <form action="agregar-producto" method="POST">
+                                        <span>
+                                            <span>RD$ <%= producto.getPrecio() %></span>
+                                            <label>Cantidad:</label>
+                                            <input type="hidden" value="<%= producto.getId() %>" name="idproducto"/>
+                                            <input type="text" value="1" id="txt-cantidad" name="cantidad" style="margin-bottom: 10px; margin-top: 15px;"/>
+                                            <button type="submit" class="btn btn-fefault cart">
+                                                <i class="fa fa-shopping-cart"></i>
+                                                Agregar al carrito
+                                            </button>
+                                        </span>
+                                    </form>
+                                    <br />
+                                    <p><b>Disponibilidad</b> Dispoible</p>
+                                    <p><b>Condici&oacute;n:</b> Nuevo</p>
+                                </div><!--/product-information-->
+                            </div>
+                        </div><!--/product-details-->
+                    </div>
                 </div>
             </div>
         </div>

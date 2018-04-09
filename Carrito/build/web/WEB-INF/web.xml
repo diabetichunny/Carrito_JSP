@@ -8,6 +8,10 @@
         <servlet-name>DeleteItem</servlet-name>
         <servlet-class>servlets.DeleteItem</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RedirectShop</servlet-name>
+        <servlet-class>servlets.RedirectShop</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddCart</servlet-name>
         <url-pattern>/agregar-producto</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>DeleteItem</servlet-name>
         <url-pattern>/borrar-item</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RedirectShop</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

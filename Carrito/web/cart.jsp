@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+                            <h3><a href="./">Carrito WEB</a></h3>
                         </div>
                     </div>
                     <div class="col-sm-8">
