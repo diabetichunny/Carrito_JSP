@@ -31,32 +31,37 @@ $(() => {
        });
    });
    
-      $('.eliminar-item').on("click", (e) => {
+    $('.eliminar-item').on("click", (e) => {
+      e.preventDefault();
+      let idprod = e.currentTarget.id.split('-')[2];
+      let cantidad = $('.eliminar-item').parent().find('.cantidad-item').val() - 1;
+
+
+      if (idprod >= 1){
+          $.ajax({
+              url: 'borrar-item',
+              type: 'POST',
+              data: {
+                  idprod: idprod,
+                  cantidad: cantidad
+              },
+              success: (r) => location.reload()
+          });
+
+      }
+      else{
+          $.ajax({
+             url: 'borrar-item',
+             type: 'POST',
+             data: {idprod: idprod},
+             success: (r) => location.reload()
+          });
+      }
+
+ });
+   
+   $('#btn-hacer-compra').on("click", (e) => {
         e.preventDefault();
-        let idprod = e.currentTarget.id.split('-')[2];
-        let cantidad = $('.eliminar-item').parent().find('.cantidad-item').val() - 1;
-        
-        
-        if (idprod >= 1){
-            $.ajax({
-                url: 'borrar-item',
-                type: 'POST',
-                data: {
-                    idprod: idprod,
-                    cantidad: cantidad
-                },
-                success: (r) => location.reload()
-            });
-            
-        }
-        else{
-            $.ajax({
-               url: 'borrar-item',
-               type: 'POST',
-               data: {idprod: idprod},
-               success: (r) => location.reload()
-            });
-        }
-        
+        alert("Gracias por su compra!");
    });
 });

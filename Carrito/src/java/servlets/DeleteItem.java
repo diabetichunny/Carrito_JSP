@@ -36,7 +36,7 @@ public class DeleteItem extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        int idprod = Integer.parseInt(request.getParameter("idprod"));
+        int idprod = Integer.parseInt(request.getParameter("idprod")) == 0 ? 0 : Integer.parseInt(request.getParameter("idprod"));
         int cantidad = Integer.parseInt(request.getParameter("cantidad")) > 0 ? Integer.parseInt(request.getParameter("cantidad")) : 0;
 
         HttpSession sesion = request.getSession(true);

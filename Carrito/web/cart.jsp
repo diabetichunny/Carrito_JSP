@@ -145,7 +145,7 @@
                             <li><h4>Total <span>RD$ <%= total %></span></h4></li>
                         </ul>              
                         <div style="text-align: center;" class="compra">
-                            <a class="btn btn-default btn-lg check_out" style="text-align: center;" href="">Hacer Compra</a>    
+                            <a class="btn btn-default btn-lg check_out" style="text-align: center;" href="" id="btn-hacer-compra">Hacer Compra</a>    
                         </div>                        
                     </div>
                 </div>
